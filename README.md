@@ -15,19 +15,20 @@ This repository implements the ROS2 version of VINS-MONO, mainly including the f
 ![mh01](https://github.com/dongbo19/VINS-MONO-ROS2/blob/main/config_pkg/config/gif/vins_ros2_mh01.gif)
 ![mh02](https://github.com/dongbo19/VINS-MONO-ROS2/blob/main/config_pkg/config/gif/vins_ros2_mh02.gif)
 # 2. Prerequisites
-* System  
-  * Ubuntu 20.04  
-  * ROS2 foxy
+* System
+  * Ubuntu 24.04
+  * ROS2 jazzy
 * Libraries
-  * OpenCV 4.2.0
-  * [Ceres Solver](http://ceres-solver.org/installation.html) 1.14.0
+  * OpenCV 4.2 or newer
+  * [Ceres Solver](http://ceres-solver.org/installation.html) 2.2 or newer
   * Eigen 3.3.7
 # 3. Build VINS-MONO-ROS2
-Clone the repository and colcon build:  
+Clone the repository and colcon build:
 ```
 cd $(PATH_TO_YOUR_ROS2_WS)/src
 git clone https://github.com/dongbo19/VINS-MONO-ROS2.git
 cd ..
+sudo apt install libceres-dev libopencv-dev
 colcon build
 ```
 # 4. VINS-MONO-ROS2 on EuRoC datasets
