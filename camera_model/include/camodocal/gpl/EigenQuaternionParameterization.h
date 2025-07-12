@@ -1,7 +1,12 @@
 #ifndef EIGENQUATERNIONPARAMETERIZATION_H
 #define EIGENQUATERNIONPARAMETERIZATION_H
 
-#include "ceres/local_parameterization.h"
+#include <ceres/version.h>
+#if CERES_VERSION_MAJOR >= 2
+#include <ceres/manifold.h>
+#else
+#include <ceres/local_parameterization.h>
+#endif
 
 namespace camodocal
 {
